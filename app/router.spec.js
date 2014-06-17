@@ -9,7 +9,7 @@ describe('Router', function() {
 		});
 
 		it('maps task list request', function() {
-			expect(router.endPointOf({ url: '/ericminio' })).toBe(require('./features/feature.xxx/lib/xxx.endpoint'));
+			expect(router.endPointOf({ url: '/feature-xxx' })).toBe(require('./features/feature.xxx/lib/xxx.endpoint'));
 		});
 		
 		it('maps static content request', function() {

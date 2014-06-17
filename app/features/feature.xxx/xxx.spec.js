@@ -18,7 +18,7 @@ describe('Your feature XXX', function() {
 
     it('expects something', function(done) {
         var browser = new Browser();
-        browser.visit('http://localhost:5000/ericminio').
+        browser.visit('http://localhost:5000/feature-xxx').
             then(function() {
                 return browser.fill('#new-item', 'I want my spa under the stars');
             }).

@@ -11,7 +11,7 @@ module.exports = {
 	
     routes: [
         {
-            pattern: /ericminio/,
+            pattern: /feature-xxx/,
             target: require('../features/feature.xxx/lib/xxx.endpoint')
         },        
     ],

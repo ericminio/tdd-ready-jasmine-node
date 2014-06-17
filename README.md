@@ -27,6 +27,6 @@ node app/lib/app.js
 Open your browser and navigate to
 
 ```sh
-http://localhost:5000
+http://localhost:5000/feature-xxx
 ```
 
