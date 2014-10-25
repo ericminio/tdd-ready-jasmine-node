@@ -1,14 +1,19 @@
 var request = require('request');
 var fs = require('fs');
 var servecontent = require('./lib/serve.static.content.js');
+var array = require('./features/utils/lib/array.utils');
 
-describe("Serve Content callback", function() {
+xdescribe("Serve Content callback", function() {
 
 	var server;
 	var folder = 'test-data';
 	
 	beforeEach(function() {	
-		if (!fs.existsSync(folder)) fs.mkdirSync(folder);			
+		if (!fs.existsSync(folder)) fs.mkdirSync(folder);
+        var files = fs.readdirSync(folder);
+        array.forEach(files, function(file) {
+            fs.unlinkSync('./' + folder + '/' + file);
+        });		
 		server = require('http').createServer(servecontent(folder)).listen(5000, 'localhost');		
 	});
 	afterEach(function() {
@@ -46,18 +51,18 @@ describe("Serve Content callback", function() {
 	});
 	
 	it("returns 200 when file does exist", function(done) {
-		fs.writeFileSync(folder + '/a-file', 'content');
+		fs.writeFileSync(folder + '/an-existing-file', 'content');
 		
-		request("http://localhost:5000/a-file", function(error, response, body) {
+		request("http://localhost:5000/an-existing-file", function(error, response, body) {
 			expect(response.statusCode).toEqual(200);
 			done();
 		});
 	});
 	
 	it("serves a css with text/css content-type", function(done) {
-	    fs.writeFileSync(folder + '/a-file.css', 'content');
+	    fs.writeFileSync(folder + '/a-css-file.css', 'content');
 
-		request("http://localhost:5000/a-file.css", function(error, response, body) {
+		request("http://localhost:5000/a-css-file.css", function(error, response, body) {
 			expect(response.headers['content-type']).toEqual('text/css');
 			done();
 		});
