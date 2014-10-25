@@ -17,7 +17,7 @@ describe('XXX listener', function() {
 
         beforeEach(function() {
     		$('body').append('<input id="new-item"/>');
-            $('body').append('<ul id="items"></um>');
+            $('body').append('<ul id="items"></ul>');
 
     		$('#new-item').val('make the world better');    		
     		listener.clicked();
