@@ -1,5 +1,5 @@
 var servecontent = require('./serve.static.content.js');
-var array        = require('../features/utils/lib/array.utils');
+var array        = require('../utils/lib/array.utils');
 
 var matching = function(url) {
 	return function(route) {

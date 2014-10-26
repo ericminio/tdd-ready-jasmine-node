@@ -1,7 +1,7 @@
 var request = require('request');
 var fs = require('fs');
 var servecontent = require('./lib/serve.static.content.js');
-var array = require('./features/utils/lib/array.utils');
+var array = require('./utils/lib/array.utils');
 
 xdescribe("Serve Content callback", function() {
 

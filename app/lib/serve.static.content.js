@@ -1,5 +1,5 @@
 var fs      = require('fs');
-var array   = require('../features/utils/lib/array.utils');
+var array   = require('../utils/lib/array.utils');
 
 var contentTypes = [
     { extension: 'css', contentType: 'text/css'},
