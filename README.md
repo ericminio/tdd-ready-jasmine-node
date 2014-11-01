@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/ericminio/tdd-ready-jasmine-node.svg?branch=master)](https://travis-ci.org/ericminio/tdd-ready-jasmine-node)
+
 ## Get ready
 
 Install [node.js](http://nodejs.org/) then run from the command line
@@ -12,7 +14,11 @@ Check your install: run the test
 npm test
 ```
 
-You should see one test fail as an invitation to describe your first feature
+You should see 1 test failing
+
+## Expect something
+
+Change [the failing test](https://github.com/ericminio/tdd-ready-jasmine-node/blob/master/app/features/feature.xxx/xxx.spec.js) to start your adventure
 
 
 ## Run the app
