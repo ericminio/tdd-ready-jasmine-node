@@ -17,7 +17,8 @@ describe('Your feature XXX', function() {
     });
 
     it('expects something', function(done) {
-        var browser = new Browser();
+        
+        var browser = Browser.create();
         browser.visit('http://localhost:5000/feature-xxx').
             then(function() {
                 return browser.fill('#new-item', 'I want my spa under the stars');
@@ -26,13 +27,9 @@ describe('Your feature XXX', function() {
                 return browser.pressButton('#save');
             }).
             then(function() {
-                expect(browser.text('ul#items li:nth-child(1)')).toEqual('something');
-                done();
+                browser.assert.text('ul#items li:nth-child(1)', 'something');
             }).
-            fail(function(error) {
-            	expect(error.toString()).toBeNull();
-            	done();
-        	});
+            then(done, done);
     });
     
 });

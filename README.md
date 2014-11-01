@@ -4,7 +4,6 @@ Install [node.js](http://nodejs.org/) then run from the command line
 
 ```sh
 npm install
-sudo npm install jasmine-node -g
 ```
 
 Check your install: run the test
@@ -21,7 +20,7 @@ You should see one test fail as an invitation to describe your first feature
 from your command line
 
 ```sh
-node app/lib/app.js
+npm start
 ```
 
 Open your browser and navigate to

@@ -3,7 +3,7 @@ var fs = require('fs');
 var servecontent = require('./lib/serve.static.content.js');
 var array = require('./utils/lib/array.utils');
 
-xdescribe("Serve Content callback", function() {
+describe("Serve Content callback", function() {
 
 	var server;
 	var folder = 'test-data';

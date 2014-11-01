@@ -1,9 +1,9 @@
-var $ = require('jquery');
+var $ = require('jquery')(require("jsdom").jsdom().parentWindow);
 var XXX = require('./lib/xxx.listener');
 
 describe('XXX listener', function() {
 
-    var listener = new XXX();
+    var listener = new XXX($);
 
     it('can be instantiated', function() {
         expect(listener).toBeDefined();
